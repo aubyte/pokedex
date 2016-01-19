@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation;
 
 class ViewController: UIViewController,
                     UICollectionViewDelegate,
@@ -17,6 +18,7 @@ class ViewController: UIViewController,
     @IBOutlet weak var collection: UICollectionView!;
     
     var _pokemon = [Pokemon]();
+    var _musicPlayer: AVAudioPlayer!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,20 @@ class ViewController: UIViewController,
         collection.delegate = self;
         collection.dataSource = self;
         
+        initAudio();
         parsePokemonCSV();
+    }
+    
+    func initAudio() {
+        let path = NSBundle.mainBundle().pathForResource("WangChungDanceHallDays", ofType: "mp3")!;
+        do {
+            _musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!);
+            _musicPlayer.prepareToPlay();
+            _musicPlayer.numberOfLoops = -1;
+            _musicPlayer.play();
+        } catch let error as NSError {
+            print(error.debugDescription);
+        }
     }
     
     func parsePokemonCSV() {
@@ -66,6 +81,20 @@ class ViewController: UIViewController,
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    }
+    
+    
+    // MARK: - Events
+    
+    @IBAction func musicButtonPressed(sender: UIButton!) {
+        if (_musicPlayer.playing) {
+            _musicPlayer.pause();
+            sender.alpha = 0.3;
+        }
+        else {
+            _musicPlayer.play();
+            sender.alpha = 1.0;
+        }
     }
 }
 
