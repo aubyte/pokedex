@@ -16,8 +16,10 @@
 		8AECC4651C4DD92100BB8251 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECC4641C4DD92100BB8251 /* Pokemon.swift */; };
 		8AECC4681C4DE71900BB8251 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECC4671C4DE71900BB8251 /* PokeCell.swift */; };
 		8AECC46A1C4E16CF00BB8251 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECC4691C4E16CF00BB8251 /* csv.swift */; };
-		8AECC46F1C4E2D9700BB8251 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AECC46E1C4E2D9700BB8251 /* pokemon.ttf */; };
+		8AECC46F1C4E2D9700BB8251 /* pokemon_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AECC46E1C4E2D9700BB8251 /* pokemon_solid.ttf */; };
 		8AECC4711C4E31C800BB8251 /* WangChungDanceHallDays.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8AECC4701C4E31C800BB8251 /* WangChungDanceHallDays.mp3 */; };
+		8AECC4991C52E41B00BB8251 /* PokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECC4981C52E41B00BB8251 /* PokeDetailViewController.swift */; };
+		8AECC49B1C52EDDD00BB8251 /* pokemon_hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AECC49A1C52EDDD00BB8251 /* pokemon_hollow.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,10 @@
 		8AECC4641C4DD92100BB8251 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		8AECC4671C4DE71900BB8251 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		8AECC4691C4E16CF00BB8251 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
-		8AECC46E1C4E2D9700BB8251 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		8AECC46E1C4E2D9700BB8251 /* pokemon_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon_solid.ttf; sourceTree = "<group>"; };
 		8AECC4701C4E31C800BB8251 /* WangChungDanceHallDays.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WangChungDanceHallDays.mp3; sourceTree = "<group>"; };
+		8AECC4981C52E41B00BB8251 /* PokeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDetailViewController.swift; sourceTree = "<group>"; };
+		8AECC49A1C52EDDD00BB8251 /* pokemon_hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon_hollow.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8AECC4511C4DA9FB00BB8251 /* ViewController.swift */,
+				8AECC4981C52E41B00BB8251 /* PokeDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -116,7 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				8AECC4701C4E31C800BB8251 /* WangChungDanceHallDays.mp3 */,
-				8AECC46E1C4E2D9700BB8251 /* pokemon.ttf */,
+				8AECC46E1C4E2D9700BB8251 /* pokemon_solid.ttf */,
+				8AECC49A1C52EDDD00BB8251 /* pokemon_hollow.ttf */,
 				8AECC4611C4DD04500BB8251 /* pokemon.csv */,
 			);
 			name = Resources;
@@ -180,11 +186,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AECC46F1C4E2D9700BB8251 /* pokemon.ttf in Resources */,
+				8AECC46F1C4E2D9700BB8251 /* pokemon_solid.ttf in Resources */,
 				8AECC45A1C4DA9FB00BB8251 /* LaunchScreen.storyboard in Resources */,
 				8AECC4711C4E31C800BB8251 /* WangChungDanceHallDays.mp3 in Resources */,
 				8AECC4571C4DA9FB00BB8251 /* Assets.xcassets in Resources */,
 				8AECC4621C4DD04500BB8251 /* pokemon.csv in Resources */,
+				8AECC49B1C52EDDD00BB8251 /* pokemon_hollow.ttf in Resources */,
 				8AECC4551C4DA9FB00BB8251 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +205,7 @@
 			files = (
 				8AECC4681C4DE71900BB8251 /* PokeCell.swift in Sources */,
 				8AECC4521C4DA9FB00BB8251 /* ViewController.swift in Sources */,
+				8AECC4991C52E41B00BB8251 /* PokeDetailViewController.swift in Sources */,
 				8AECC4501C4DA9FB00BB8251 /* AppDelegate.swift in Sources */,
 				8AECC4651C4DD92100BB8251 /* Pokemon.swift in Sources */,
 				8AECC46A1C4E16CF00BB8251 /* csv.swift in Sources */,

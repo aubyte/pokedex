@@ -120,6 +120,17 @@ class ViewController: UIViewController,
     }
     
     
+    // MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "pokeDetailVC") {
+            let poke = (sender as! PokeCell)._pokemon;
+            let detailVC = segue.destinationViewController as! PokeDetailViewController;
+            detailVC._poke = poke;
+        }
+    }
+    
+    
     // MARK: - Events
     
     @IBAction func musicButtonPressed(sender: UIButton!) {
