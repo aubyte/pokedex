@@ -26,7 +26,14 @@ class PokeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = _poke.name;
+        mainImg.image = UIImage(named: _poke.pokedexId.description);
+        
+        _poke.downloadPokeDetails { () -> () in
+            self.typeLbl.text = self._poke.type;
+            self.descriptionLbl.text = self._poke.description;
+            self.nextEvolLvlLbl.text = self._poke.nexEvo;
+        }
     }
 
 
